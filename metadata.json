@@ -1,0 +1,9 @@
+{
+  "name": "M2 Moto Peças - Salto/SP",
+  "description": "Oficina especializada e loja de peças em Salto/SP. Serviços de alta performance e consultoria técnica via WhatsApp.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

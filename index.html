@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br" style="scroll-behavior: smooth; overscroll-behavior-y: none;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>M2 Moto Peças - Salto/SP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Prevenção total de efeitos de sistema no mobile */
+        * {
+            -webkit-tap-highlight-color: transparent !important;
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+            outline: none !important;
+        }
+        
+        html, body {
+            overscroll-behavior-y: none;
+            height: 100%;
+        }
+
+        /* Permite seleção apenas em textos informativos se necessário */
+        p, h1, h2, h3, span {
+            -webkit-user-select: text !important;
+            user-select: text !important;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f; /* Levemente mais claro que o #050505 anterior */
+            color: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-oswald {
+            font-family: 'Oswald', sans-serif;
+        }
+        .glow-red {
+            box-shadow: 0 0 25px rgba(220, 38, 38, 0.5);
+        }
+        .text-glow-red {
+            text-shadow: 0 0 12px rgba(220, 38, 38, 0.7);
+        }
+        .glass-card {
+            background: rgba(25, 25, 25, 0.7); /* Mais claro que rgba(15, 15, 15, 0.7) */
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .border-futuristic {
+            border: 1px solid rgba(220, 38, 38, 0.25);
+            transition: all 0.3s ease;
+        }
+        .border-futuristic:hover {
+            border-color: rgba(220, 38, 38, 0.7);
+            box-shadow: 0 0 25px rgba(220, 38, 38, 0.2);
+            background: rgba(40, 40, 40, 0.8);
+        }
+        ::selection {
+            background-color: #dc2626;
+            color: white;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f0f0f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc2626;
+        }
+
+        /* Background radial glows for depth */
+        .bg-glow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .bg-glow-1 {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.05) 0%, transparent 70%);
+        }
+        .bg-glow-2 {
+            position: absolute;
+            bottom: -10%;
+            left: -10%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="bg-glow-container">
+        <div class="bg-glow-1"></div>
+        <div class="bg-glow-2"></div>
+    </div>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
